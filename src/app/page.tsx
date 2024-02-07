@@ -50,7 +50,7 @@ export default function Home() {
 }
 
 
-export const products = [
+ const products = [
   {
    
     link: "https://gomoonbeam.com",
