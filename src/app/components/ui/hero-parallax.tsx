@@ -14,8 +14,7 @@ export const HeroParallax = ({
     products,
 }: {
     products: {
-        title: string;
-        link: string;
+
         thumbnail: string;
     }[];
 }) => {
@@ -74,7 +73,7 @@ export const HeroParallax = ({
                         <ProductCard
                             product={product}
                             translate={translateX}
-                            key={product.title}
+                            key={product.thumbnail}
                         />
                     ))}
                 </motion.div>
@@ -92,7 +91,7 @@ export const Header = () => {
             I love you and I am really grateful to God for you
             </h1>
             <p className="max-w-2xl text-base md:text-xl mt-8 text-white dark:text-neutral-200">
-                Your laughter is the melody to my heart&apos;s song, your smile the sunshine on my darkest days. I cherish every moment spent with you and look forward to creating countless beautiful memories together. Happy Valentine&apos;s Day Love ❤️❤️❤️
+                Your laughter is the melody to my heart&apos;s song, your smile is the sunshine on my darkest days. I cherish every moment spent with you and look forward to creating countless beautiful memories together. Happy Valentine&apos;s Day Love ❤️❤️❤️
             </p>
         </div>
     );
@@ -103,8 +102,8 @@ export const ProductCard = ({
     translate,
 }: {
     product: {
-        title: string;
-        link: string;
+      
+      
         thumbnail: string;
     };
     translate: MotionValue<number>;
@@ -117,11 +116,11 @@ export const ProductCard = ({
             whileHover={{
                 y: -20,
             }}
-            key={product.title}
+            key={product.thumbnail}
             className="group/product h-96 w-[30rem] relative flex-shrink-0"
         >
             <Link
-                href={product.link}
+                href='/'
                 className="block group-hover/product:shadow-2xl "
             >
                 <Image
@@ -129,13 +128,11 @@ export const ProductCard = ({
                     height="200"
                     width="200"
                     className="object-contain object-left-top absolute h-full w-full inset-0"
-                    alt={product.title}
+                    alt=''
                 />
             </Link>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-                {product.title}
-            </h2>
+           
         </motion.div>
     );
 };

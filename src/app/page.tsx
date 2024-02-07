@@ -158,14 +158,14 @@ const testimonials = [
     image:'/queen1.png'
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
+    quote: "You are a queen and More",
     
     
     image:'/queen2.jpg'
   },
   {
     quote:
-      "You are my dream come through Tracy.",
+      "You are my dream Baby.",
     
     image:'/queen3.jpg'
   },
